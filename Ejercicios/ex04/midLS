@@ -1,0 +1,1 @@
+ls -l -U | grep -v '/\.\?$' | awk '{if (substr($1, 1, 1) == "d") printf "%s/,\n", $NF; else printf "%s,\n", $NF}'
